@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>Journal App</header>
+    <div class="container">
+        <div class="entry-form">
+            <input type="text" id="title" placeholder="Title">
+            <textarea id="content" placeholder="Write your journal entry..."></textarea>
+            <button onclick="saveEntry()">ADD</button>
+        </div>
+
+        <input type="text" id="search" placeholder="Search..." oninput="searchEntries()">
+
+        <ul id="entries-list"></ul>
+    </div>
+
+    <script src="obada.js"></script>
+</body>
+</html>
