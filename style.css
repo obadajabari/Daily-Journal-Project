@@ -53,3 +53,27 @@ header {
 .entry-form button:hover {
     opacity: 0.9;
 }
+
+#search {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: var(--card-radius);
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: white;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
