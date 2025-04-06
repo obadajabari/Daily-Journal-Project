@@ -25,3 +25,31 @@ header {
     max-width: 500px;
     margin: auto;
 }
+.entry-form input,
+.entry-form textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    padding: 10px;
+    margin: 10px 0;
+    outline: none;
+    background: transparent;
+    resize: none;
+}
+
+.entry-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: var(--card-radius);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+.entry-form button:hover {
+    opacity: 0.9;
+}
