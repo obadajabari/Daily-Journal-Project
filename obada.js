@@ -45,4 +45,10 @@ function loadEntries() {
         entriesList.appendChild(li);
     });
 }
+function deleteEntry(index) {
+    let entries = JSON.parse(localStorage.getItem("entries")) || [];
+    entries.splice(index, 1);
+    localStorage.setItem("entries", JSON.stringify(entries));
+    loadEntries();
+}
 
