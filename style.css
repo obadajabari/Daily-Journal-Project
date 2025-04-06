@@ -77,3 +77,15 @@ li {
     display: flex;
     flex-direction: column;
 }
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.entry-header h3 {
+    margin: 0;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
