@@ -61,3 +61,19 @@ function editEntry(index) {
     deleteEntry(index);
 }
 
+function searchEntries() {
+    let query = document.getElementById("search").value.toLowerCase();
+    let entries = document.querySelectorAll("#entries-list li");
+
+    entries.forEach(entry => {
+        let title = entry.querySelector("h3").innerText.toLowerCase();
+        let content = entry.querySelector(".entry-content").innerText.toLowerCase();
+
+        if (title.includes(query) || content.includes(query)) {
+            entry.style.display = "block";
+        } else {
+            entry.style.display = "none";
+        }
+    });
+}
+
