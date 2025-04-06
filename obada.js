@@ -25,3 +25,24 @@ function saveEntry() {
    
     loadEntries();
 }
+function loadEntries() {
+    let entriesList = document.getElementById("entries-list");
+    entriesList.innerHTML = "";
+
+    let entries = JSON.parse(localStorage.getItem("entries")) || [];
+    entries.forEach((entry, index) => {
+        let li = document.createElement("li");
+        li.innerHTML = `
+            <div class="entry-header">
+                <h3>${entry.title}</h3>
+            </div>
+            <div class="entry-content">${entry.content}</div>
+            <div class="actions">
+                <button onclick="editEntry(${index})"><i class="fas fa-pen"></i></button>
+                <button onclick="deleteEntry(${index})"><i class="fas fa-trash"></i></button>
+            </div>
+        `;
+        entriesList.appendChild(li);
+    });
+}
+
