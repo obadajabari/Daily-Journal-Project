@@ -51,4 +51,13 @@ function deleteEntry(index) {
     localStorage.setItem("entries", JSON.stringify(entries));
     loadEntries();
 }
+function editEntry(index) {
+    let entries = JSON.parse(localStorage.getItem("entries")) || [];
+    let entry = entries[index];
+
+    document.getElementById("title").value = entry.title;
+    document.getElementById("content").value = entry.content;
+
+    deleteEntry(index);
+}
 
